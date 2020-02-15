@@ -18,12 +18,12 @@ html {
     text-align: right;
 }
 
-#previous {
+#aux-display {
     margin: 5px ;
     font-size: 1.5rem ;
 }
 
-#current {
+#main-display {
     margin: 5px ;
     font-size: 2rem ;
 }
@@ -53,7 +53,6 @@ html {
     box-shadow: none!important;
 }
 
-/* briefly depresses and saturates button during a click */
 .calculator button:active {
     transform: translateY(2px);
 }
@@ -129,11 +128,11 @@ html {
         margin-bottom: 3vh ;
     }
 
-    #previous {
+    #upper-display {
         font-size: 3.5rem;
     }
 
-    #current {
+    #lower-display {
         font-size: 4.5rem;
     }
     .calculator button {
