@@ -102,6 +102,13 @@ class Calculator {
             this.updateDisplay() ;
         }
         // invalid input check
+        // can't have a leading 0 followed by 0
+        if (digit === 0 && this.currentOperand === "0") {
+            this.auxDisplay = "invalid input";
+            this.updateDisplay();
+            return;
+        };
+        // invalid input check
         // if the input is a decimal point and the current expression already includes one
         // OR, if the current expression is empty and the input is a decimal point
         // OR, if the current expression ends with an operator and the input is a decimal point
@@ -110,6 +117,7 @@ class Calculator {
             this.updateDisplay() ;
         } else {
             // if input checks are passed,
+            // update the string and update display
             this.mainDisplay = this.mainDisplay.toString() + digit.toString();
             this.currentOperand = this.currentOperand.toString() + digit.toString() ;   
             this.updateDisplay() ;
