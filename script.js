@@ -105,7 +105,7 @@ class Calculator {
         // if the input is a decimal point and the current expression already includes one
         // OR, if the current expression is empty and the input is a decimal point
         // OR, if the current expression ends with an operator and the input is a decimal point
-        if((digit === '.' && ((this.currentOperand.includes('.')) || (this.mainDisplay === '') || (this.mainDisplay.endsWith(' ')))) || this.mainDisplay.endsWith(")")) {
+        if((digit === '.' && ((this.currentOperand.includes('.')) || (this.mainDisplay === '') || (this.mainDisplay.endsWith(' ')))) || this.mainDisplay.endsWith(")") || ((this.currentOperand === 0) && (Digit === '0'))) {
             this.auxDisplay = "invalid input" ;
             this.updateDisplay() ;
         } else {
